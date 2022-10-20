@@ -1,0 +1,1 @@
+console.log("ESCREVENDO NO CONSOLE")
