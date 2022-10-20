@@ -2,22 +2,27 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
  }
 
-async function Animation(element_id) {
-    let resume = document.getElementById(element_id)
-    let resume_data = resume.innerHTML
-    resume.innerHTML = ""
-    for(let i = 0; i < resume_data.length; i++){
-        resume.innerHTML = resume.innerHTML + resume_data.charAt(i)
-        await sleep(Math.random()*30 + 10)
+async function Animation(element_id, do_backline) {
+    let elem = document.getElementById(element_id)
+    let elem_data = elem.innerHTML.split("<br>")
+    elem.innerHTML = ""
+    for(let paragraph = 0; paragraph < elem_data.length; paragraph++){
+        for(let i = 0; i < elem_data[paragraph].length; i++){
+            elem.innerHTML = elem.innerHTML + elem_data[paragraph].charAt(i)
+            await sleep(Math.random()*30 + 10)
+        }
+        if(do_backline == true){
+            elem.innerHTML += '<br>'
+        }
     }
 }
 
-Animation("name")
-Animation("age")
-Animation("email")
-Animation("cellphone")
-Animation("resume")
-Animation("experience")
-Animation("education")
-Animation("skills")
-Animation("linkedin")
+Animation("name", false)
+Animation("age", false)
+Animation("email", false)
+Animation("cellphone", false)
+Animation("resume", true)
+Animation("experience", true)
+Animation("education", true)
+Animation("skills", true)
+Animation("linkedin", true)

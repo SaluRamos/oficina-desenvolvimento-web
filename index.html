@@ -6,6 +6,7 @@
     <title>Currículo</title>
     <link rel="stylesheet" href="pagina1.css">
     <script type="application/javascript" src="pagina1.js" defer></script>
+    <script type="application/php" src="pagina1.php" defer></script>
 </head>
 <body>
     <header>
@@ -17,7 +18,10 @@
             <cellphone id="cellphone">celular: +55 43 9 9600 - 6983</cellphone><br>
         </about>
     </header>
-    <resume id="resume">Olá! Comecei a programar com 13 anos de idade para desenvolver jogos na Unity Game Engine com C#, mantive esse hobbie por 6 anos até começar a desenvolver automações e aplicações web/desktop para projetos pessoais, e pouco tempo depois como freelancer.<br><br>Hoje já conto com vasta experiência e 29 projetos em meu github, plenamente autorais, envolvendo websites integrados com diversos frameworks web, spa's, automações com selenium/requests, api rest's, crud com banco de dados postgre, machine learning, interfaces, etc. Utilizo versionamento de código no meu dia a dia assim como docker, e também já trabalhei com heroku e AWS, na qual possuo alguns projetos hospedados onde faço manutenção recorrente.<br><br>Sou atencioso com a qualidade do meu código, aplicando os princípios de clean code e solid, realizando testes unitários, e estudando design patterns. Considero-me obsessivo por programação e meu objetivo é aperfeiçoamento pessoal até atingir a senioridade.
+    <resume id="resume">
+        Olá! Comecei a programar com 13 anos de idade para desenvolver jogos na Unity Game Engine com C#, mantive esse hobbie por 6 anos até começar a desenvolver automações e aplicações web/desktop para projetos pessoais, e pouco tempo depois como freelancer.<br><br>
+        Hoje já conto com vasta experiência e 29 projetos em meu github, plenamente autorais, envolvendo websites integrados com diversos frameworks web, spa's, automações com selenium/requests, api rest's, crud com banco de dados postgre, machine learning, interfaces, etc. Utilizo versionamento de código no meu dia a dia assim como docker, e também já trabalhei com heroku e AWS, na qual possuo alguns projetos hospedados onde faço manutenção recorrente.<br><br>
+        Sou atencioso com a qualidade do meu código, aplicando os princípios de clean code e solid, realizando testes unitários, e estudando design patterns. Considero-me obsessivo por programação e meu objetivo é aperfeiçoamento pessoal até atingir a senioridade.
     </resume>
     <info>
         <h2>EXPERIENCIA</h2>
@@ -33,18 +37,29 @@
         <skills id="skills">
             HTML<br>
             CSS<br>
-            JAVASCRIPT<br>
+            JAVASCRIPT
         </skills>
         <h2>LINKEDIN</h2>
         <a id="linkedin" href="https://www.linkedin.com/in/salu-ramos/">linkedin.com/in/salu-ramos</a>
     </info>
-    <!-- <table>
-        <tr>
-            <td>Habilidades</td>
-        </tr>
-        <tr>
-            <td>Pão</td>
-        </tr>
-    </table> -->
+    <form id="calculator" action="calc.php" method="post">
+        <input1>
+            <label>VALOR 1: </label><input type="number" name="number_1"><br>
+        </input1>
+        <input2>
+            <label>VALOR 2: </label><input type="number" name="number_2"><br>
+        </input2>
+        <input3>
+            <label>OPERAÇÃO: </label><select name="operation">
+                <option value="+">Adição</option>
+                <option value="-">Subtração</option>
+                <option value="*">Multiplicação</option>
+                <option value="/">Divisão</option>
+            </select><br>
+        </input3>
+        <input4>
+            <input type="submit" name="finish" value="Calcular">
+        </input4>
+    </form>
 </body>
 </html>

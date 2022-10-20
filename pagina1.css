@@ -44,8 +44,29 @@ info{
     margin: 5px;
 }
 
-table{
-    border: 1;
+#calculator{
+    margin-top: 30px;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    justify-content: center;
+}
+
+input1{
+    grid-row: 1;
+    margin-top: 5px;
+}
+input2{
+    grid-row: 2;
+    margin-top: 5px;
+}
+input3{
+    grid-row: 3;
+    margin-top: 5px;
+}
+input4{
+    margin-top: 5px;
+    grid-row: 4;
+    justify-self: center;
 }
 
 a{
